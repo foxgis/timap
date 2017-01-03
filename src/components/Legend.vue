@@ -25,6 +25,8 @@ export default {
 .legend {
   width: 500px;
   padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 ul {

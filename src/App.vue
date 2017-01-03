@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <Legend></Legend>
     <Map :access-token="accessToken" :options="options"></Map>
+    <Legend class="legend"></Legend>
+    <Toolbar class="toolbar"></Toolbar>
   </div>
 </template>
 
@@ -42,7 +43,12 @@ html, body {
   position: absolute;
   top: 15px;
   left: 15px;
-  background-color: rgba(255, 255, 255, 0.8);
-  z-index: 1;
+}
+
+.toolbar {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
 }
 </style>

@@ -1,6 +1,6 @@
 # timap
 
-> A Vue.js project
+> A map visualizing time series data
 
 ## Build Setup
 

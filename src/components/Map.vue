@@ -28,6 +28,7 @@ export default {
     this.options.container = this.$el
     map = new mapboxgl.Map(this.options)
     map.addControl(new mapboxgl.NavigationControl())
+    map.addControl(new mapboxgl.ScaleControl({unit: 'metric'}))
   }
 }
 </script>

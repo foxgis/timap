@@ -2,7 +2,7 @@
   <div class="toolbar">
     <h1>{{ value }}</h1>
     <i-Button size="large" shape="circle" :icon="icon" @click="onClick"></i-Button>
-    <Slider class="slider" :value="value" :min="2010" :max="2016" show-stops></Slider>
+    <Slider class="slider" :value.sync="value" :min="2010" :max="2016" @on-change="onChange" show-stops></Slider>
   </div>
 </template>
 
@@ -19,10 +19,18 @@ export default {
   methods: {
     onClick () {
       this.icon = this.icon === 'play' ? 'pause' : 'play'
-      const animate = setInterval(function () {
-        this.value = (this.value + 1) % 2010 + 2010
-        console.log(this.value)
-      }, 1000)
+      const animate = () => {
+        if (this.icon === 'play') return
+
+        this.value = (this.value + 1 - 2010) % 7 + 2010
+        setTimeout(animate, 500)
+      }
+
+      setTimeout(animate, 500)
+    },
+
+    onChange (value) {
+      console.log(value)
     }
   }
 }

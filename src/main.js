@@ -6,11 +6,13 @@ import App from './App'
 import Map from './components/Map'
 import Legend from './components/Legend'
 import Toolbar from './components/Toolbar'
+import Sidebar from './components/Sidebar'
 
 Vue.use(iview)
 Vue.component('Map', Map)
 Vue.component('Legend', Legend)
 Vue.component('Toolbar', Toolbar)
+Vue.component('Sidebar', Sidebar)
 
 /* eslint-disable no-new */
 new Vue({

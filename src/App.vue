@@ -3,6 +3,7 @@
     <Map :access-token="accessToken" :options="options"></Map>
     <Legend class="legend"></Legend>
     <Toolbar class="toolbar"></Toolbar>
+    <Sidebar class="sidebar"></Sidebar>
   </div>
 </template>
 
@@ -15,8 +16,8 @@ export default {
       options: {
         style: 'mapbox://styles/mapbox/streets-v9',
         attributionControl: false,
-        center: [-74.50, 40],
-        zoom: 9
+        center: [114.2704, 30.5669],
+        zoom: 10
       }
     }
   }
@@ -50,5 +51,12 @@ html, body {
   bottom: 20px;
   left: 50%;
   transform: translate(-50%);
+}
+
+.sidebar {
+  position: absolute;
+  bottom: 50%;
+  transform: translate(0, 50%);
+  right: 10px;
 }
 </style>

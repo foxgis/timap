@@ -2,7 +2,7 @@
   <div id="app">
     <Map :access-token="accessToken" :options="options"></Map>
     <Legend class="legend"></Legend>
-    <Toolbar class="toolbar" @on-change="changeYear"></Toolbar>
+    <Toolbar class="toolbar"></Toolbar>
     <Sidebar class="sidebar"></Sidebar>
   </div>
 </template>
@@ -19,12 +19,6 @@ export default {
         center: [114.2704, 30.5669],
         zoom: 10
       }
-    }
-  },
-
-  methods: {
-    changeYear (value) {
-      console.log(value)
     }
   }
 }
@@ -62,6 +56,6 @@ html, body {
 .sidebar {
   position: absolute;
   top: 15px;
-  right: 50px;
+  right: 15px;
 }
 </style>

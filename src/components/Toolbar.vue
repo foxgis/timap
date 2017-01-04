@@ -11,14 +11,19 @@
 export default {
   data () {
     return {
-      value: 2010,
       icon: 'play'
     }
   },
 
-  watch: {
-    value (year) {
-      this.$emit('on-change', year)
+  computed: {
+    value: {
+      get () {
+        return this.$store.state.year
+      },
+
+      set (newValue) {
+        this.$store.commit('changeYear', {year: newValue})
+      }
     }
   },
 

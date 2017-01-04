@@ -27,7 +27,7 @@ export default {
     mapboxgl.accessToken = this.accessToken
     this.options.container = this.$el
     map = new mapboxgl.Map(this.options)
-    map.addControl(new mapboxgl.NavigationControl())
+    map.addControl(new mapboxgl.NavigationControl(), 'bottom-right')
     map.addControl(new mapboxgl.ScaleControl({unit: 'metric'}))
   }
 }

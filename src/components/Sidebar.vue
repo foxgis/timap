@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Radio-group type="button">
+    <Radio-group :model.sync="value" type="button">
         <Radio value="湖泊"></Radio>
         <Radio value="居民地"></Radio>
         <Radio value="铁路"></Radio>
@@ -15,6 +15,16 @@
 
 <script>
 export default {
-  //
+  computed: {
+    value: {
+      get () {
+        return this.$store.state.theme
+      },
+
+      set (newValue) {
+        this.$store.commit('changeTheme', {theme: newValue})
+      }
+    }
+  }
 }
 </script>

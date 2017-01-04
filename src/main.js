@@ -2,6 +2,7 @@ import 'iview/dist/styles/iview.css'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import Vue from 'vue'
 import iview from 'iview'
+import store from './store'
 import App from './App'
 import Map from './components/Map'
 import Legend from './components/Legend'
@@ -17,5 +18,6 @@ Vue.component('Sidebar', Sidebar)
 /* eslint-disable no-new */
 new Vue({
   el: 'body',
-  components: { App }
+  components: { App },
+  store
 })

@@ -2,7 +2,7 @@
   <div class="toolbar">
     <h1>{{ value }}</h1>
     <i-Button size="large" shape="circle" :icon="icon" @click="onClick"></i-Button>
-    <Slider class="slider" :value.sync="value" :min="2010" :max="2016" @on-change="onChange" show-stops></Slider>
+    <Slider class="slider" :value.sync="value" :min="2010" :max="2016" show-stops></Slider>
   </div>
 </template>
 
@@ -13,6 +13,12 @@ export default {
     return {
       value: 2010,
       icon: 'play'
+    }
+  },
+
+  watch: {
+    value (year) {
+      this.$emit('on-change', year)
     }
   },
 
@@ -27,10 +33,6 @@ export default {
       }
 
       setTimeout(animate, 500)
-    },
-
-    onChange (value) {
-      console.log(value)
     }
   }
 }

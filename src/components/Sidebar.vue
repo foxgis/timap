@@ -1,14 +1,14 @@
 <template>
   <div>
-    <Button-group vertical>
-      <i-Button>湖泊</i-Button>
-      <i-Button>居民地</i-Button>
-      <i-Button>铁路</i-Button>
-      <i-Button>城际公路</i-Button>
-      <i-Button>城市道路</i-Button>
-      <i-Button>城市管线</i-Button>
-      <i-Button>城市绿地</i-Button>
-    </Button-group>
+    <Radio-group type="button">
+        <Radio value="湖泊"></Radio>
+        <Radio value="居民地"></Radio>
+        <Radio value="铁路"></Radio>
+        <Radio value="城际公路"></Radio>
+        <Radio value="城市道路"></Radio>
+        <Radio value="城市管线"></Radio>
+        <Radio value="城市绿地"></Radio>
+    </Radio-group>
   </div>
 </template>
 

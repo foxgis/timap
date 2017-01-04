@@ -9,15 +9,17 @@
 
 
 <script>
+import style from './style'
+
 export default {
   data () {
     return {
       accessToken: 'pk.eyJ1IjoibWFwZXIiLCJhIjoiY2l4Z3gxaTliMDAxMjJ5dG1iNjAxcmJ3MiJ9.SzNnsW1nwiAraIkhlYlPfA',
       options: {
-        style: 'mapbox://styles/mapbox/streets-v9',
+        style,
         attributionControl: false,
-        center: [114.2704, 30.5669],
-        zoom: 10
+        center: [114.354631, 30.528430],
+        zoom: 16.8
       }
     }
   }

@@ -1,0 +1,40 @@
+{
+  "version": 8,
+  "sources": {
+    "composite": {
+      "url": "mapbox://maper.cixj63297002o2wsdai0dxt4v-1735j",
+      "type": "vector"
+    }
+  },
+  "layers": [{
+    "id": "background",
+    "type": "background",
+    "layout": {},
+    "paint": {
+      "background-color": "hsl(55, 11%, 96%)"
+    }
+  }, {
+    "id": "ti-layer",
+    "type": "fill",
+    "source": "composite",
+    "source-layer": "timap",
+    "layout": {
+      "visibility": "visible"
+    },
+    "paint": {
+      "fill-color": {
+        "property": "VERSION",
+        "type": "interval",
+        "stops": [
+          [2010, "rgb(218, 59, 27)"],
+          [2011, "rgb(232, 92, 65)"],
+          [2012, "rgb(238, 131, 110)"],
+          [2013, "rgb(254, 190, 18)"],
+          [2014, "rgb(127, 205, 187)"],
+          [2015, "rgb(65, 182, 196)"],
+          [2016, "rgb(29, 145, 192)"]
+        ]
+      }
+    }
+  }]
+}
